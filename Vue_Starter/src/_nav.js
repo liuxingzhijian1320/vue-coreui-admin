@@ -10,5 +10,10 @@ export default {
             url: '/Goods',
             icon: 'fa fa-bluetooth-b',
         },
+        {
+            name: '弹出层',
+            url: '/Modal',
+            icon: 'fa fa-bug',
+        },
     ],
 };

@@ -17,6 +17,9 @@ const Goods = resolve =>
     import ('src/views/Goods/Goods');
 const GoodsAddUpdate = resolve =>
     import ('src/views/Goods/Goods.add.upadte');
+//弹出层
+const Modal = resolve =>
+    import ('src/views/Modal/Modal');
 
 Vue.use(Router);
 
@@ -94,6 +97,16 @@ const router = new Router({
                             title: '商品编辑',
                         },
                     }, ],
+                },
+
+                //弹出层
+                {
+                    path: 'Modal',
+                    name: 'Modal',
+                    component: Modal,
+                    meta: {
+                        title: '弹出层',
+                    },
                 },
             ],
         },

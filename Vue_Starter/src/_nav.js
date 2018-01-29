@@ -1,8 +1,14 @@
 //full.vue 中使用  左侧边栏
 export default {
     items: [{
-        name: 'Dashboard',
-        url: '/dashboard',
-        icon: 'icon-speedometer',
-    }, ],
+            name: '首页',
+            url: '/dashboard',
+            icon: 'icon-speedometer',
+        },
+        {
+            name: '商品',
+            url: '/Goods',
+            icon: 'fa fa-bluetooth-b',
+        },
+    ],
 };

@@ -16,13 +16,19 @@ export default {
       default: () => [],
     },
   },
+  watch: {
+    list(val) {
+      // console.info(2, val);
+    },
+  },
   methods: {
     isLast(index) {
       return index === this.list.length - 1;
     },
     showName(item) {
-      if (item.meta && item.meta.label) {
-        item = item.meta && item.meta.label;
+      // console.info(1, item);
+      if (item.meta && item.meta.title) {
+        item = item.meta && item.meta.title;
       }
       if (item.name) {
         item = item.name;

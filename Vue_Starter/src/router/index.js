@@ -7,7 +7,7 @@ const Full = resolve =>
 
 // Views
 const Dashboard = resolve =>
-    import ('src/views/Dashboard');
+    import ('src/views/Dashboard/Dashboard');
 
 Vue.use(Router);
 

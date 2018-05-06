@@ -69,7 +69,7 @@ const router = new Router({
                         },
                     },
                     children: [{
-                        path: '/GoodsAdd',
+                        path: 'GoodsAdd',
                         name: 'GoodsAdd',
                         component: GoodsAddUpdate,
                         meta: {
@@ -92,7 +92,7 @@ const router = new Router({
                         },
                     },
                     children: [{
-                        path: '/GoodsUpdate/:id',
+                        path: 'GoodsUpdate/:id',
                         name: 'GoodsUpdate',
                         component: GoodsAddUpdate,
                         meta: {

@@ -62,14 +62,9 @@ export default {
           arr.push(n.meta);
         }
       });
-      console.info('aee', arr);
       return arr;
     },
   },
-  mounted() {
-    let routes = this.$router.options.routes[0].children;
-
-    console.info(33, routes);
-  },
+  mounted() {},
 };
 </script>

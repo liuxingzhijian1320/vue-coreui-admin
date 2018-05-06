@@ -88,9 +88,7 @@ export default {
       e.target.parentElement.classList.toggle('open');
     },
   },
-  mounted() {
-    console.info('navItems', this.navItems);
-  },
+  mounted() {},
 };
 </script>
 

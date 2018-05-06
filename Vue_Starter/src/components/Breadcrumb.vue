@@ -26,7 +26,9 @@ export default {
       return index === this.list.length - 1;
     },
     showName(item) {
-      // console.info(1, item);
+      if (item.meta && item.meta.name && item.parent.name) {
+        item = item.meta && item.meta.name;
+      }
       if (item.meta && item.meta.title) {
         item = item.meta && item.meta.title;
       }

@@ -30,7 +30,7 @@ import {
   Aside as AppAside,
   Footer as AppFooter,
   Breadcrumb,
-} from '../components/';
+} from '../components/base';
 
 export default {
   name: 'full',

@@ -5,11 +5,11 @@
     <!-- 内容区域 -->
     <div class="app-body">
       <!-- 导航栏 侧边栏 -->
-      <Sidebar :navItems="nav"/>
+      <Sidebar :navItems="routes" />
       <!--  主体区域 -->
       <main class="main">
         <!-- 面包屑 -->
-        <breadcrumb :list="list"/>
+        <breadcrumb :list="list" />
         <!-- 路由视图 -->
         <div class="container-fluid">
           <router-view></router-view>
@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import nav from '../_nav';
-
 import {
   Header as AppHeader,
   Sidebar,
@@ -44,9 +42,7 @@ export default {
     Breadcrumb,
   },
   data() {
-    return {
-      nav: nav.items,
-    };
+    return {};
   },
   computed: {
     name() {
@@ -55,6 +51,25 @@ export default {
     list() {
       return this.$route.matched;
     },
+    routes() {
+      let list = this.$router.options.routes[0].children;
+      let arr = [];
+      list.forEach((n, i) => {
+        if (!n.children) {
+          n.meta.url = n.path;
+          n.meta.name = n.meta.title;
+          delete n.meta.title;
+          arr.push(n.meta);
+        }
+      });
+      console.info('aee', arr);
+      return arr;
+    },
+  },
+  mounted() {
+    let routes = this.$router.options.routes[0].children;
+
+    console.info(33, routes);
   },
 };
 </script>

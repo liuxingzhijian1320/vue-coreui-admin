@@ -35,27 +35,29 @@ const router = new Router({
             children: [
                 //首页
                 {
-                    path: 'dashboard',
+                    path: '/dashboard',
                     name: 'Dashboard',
                     component: Dashboard,
                     meta: {
                         title: '首页',
+                        icon: 'icon-speedometer',
                     },
                 },
 
                 //商品列表
                 {
-                    path: 'Goods',
+                    path: '/Goods',
                     name: 'Goods',
                     component: Goods,
                     meta: {
                         title: '商品',
+                        icon: 'fa fa-bluetooth-b',
                     },
                 },
 
                 //商品新增
                 {
-                    path: 'Goods',
+                    path: '/Goods',
                     // name: 'Goods',
                     // component: Goods,
                     meta: {
@@ -67,7 +69,7 @@ const router = new Router({
                         },
                     },
                     children: [{
-                        path: 'GoodsAdd',
+                        path: '/GoodsAdd',
                         name: 'GoodsAdd',
                         component: GoodsAddUpdate,
                         meta: {
@@ -78,7 +80,7 @@ const router = new Router({
 
                 //商品编辑
                 {
-                    path: 'Goods',
+                    path: '/Goods',
                     // name: 'Goods',
                     // component: Goods,
                     meta: {
@@ -90,7 +92,7 @@ const router = new Router({
                         },
                     },
                     children: [{
-                        path: 'GoodsUpdate/:id',
+                        path: '/GoodsUpdate/:id',
                         name: 'GoodsUpdate',
                         component: GoodsAddUpdate,
                         meta: {
@@ -101,11 +103,12 @@ const router = new Router({
 
                 //弹出层
                 {
-                    path: 'Modal',
+                    path: '/Modal',
                     name: 'Modal',
                     component: Modal,
                     meta: {
                         title: '弹出层',
+                        icon: 'fa fa-bluetooth-b',
                     },
                 },
             ],
@@ -120,7 +123,7 @@ const router = new Router({
                 },
             },
             children: [{
-                path: 'login',
+                path: '/login',
                 name: 'Login',
                 component: Login,
             }, ],
